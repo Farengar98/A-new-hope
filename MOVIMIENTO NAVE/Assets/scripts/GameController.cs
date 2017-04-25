@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour {
         {
             Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
             Instantiate(Asteorid, spawnPosition, Quaternion.identity);
-            yield return new WaitForSeconds(spawnDelay);
+            yield return new WaitForSeconds(spawnDelay);            
         }
 	  }
 }
