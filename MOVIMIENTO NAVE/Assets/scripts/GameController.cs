@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour {
     public float waitHorde;
     int counter = 0;
     public int spawnPowerUp;
+
+    //UI PUNTUACION
     private int Wave = 0;
     public Text puntuacion;
 	
@@ -24,33 +26,34 @@ public class GameController : MonoBehaviour {
 	
 	IEnumerator SpawnAteroids()
     {
-        while (true)
-        {
-            
-            for (int i = 0; i < totalAsteoirds; i++)
+        
+            while (true)
             {
-                
-                //Asteorid.GetComponent<Renderer>().material.color = Color.red;
-                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
-                Instantiate(Asteorid, spawnPosition, Quaternion.identity);
-                yield return new WaitForSeconds(spawnDelay);
+
+                for (int i = 0; i < totalAsteoirds; i++)
+                {
+
+
+                    Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                    Instantiate(Asteorid, spawnPosition, Quaternion.identity);
+                    yield return new WaitForSeconds(spawnDelay);
+                }
+
+                yield return new WaitForSeconds(waitHorde);
+
+
+                /*if (counter == spawnPowerUp)
+                {
+                    Asteorid.GetComponent<Renderer>().material.color = Color.red;
+                    Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                    Instantiate(AsteoridPowerUp, spawnPosition, Quaternion.identity);
+
+                }*/
+                Wave++;
+                puntuacion.text = "WAVE: " + Wave;
+
             }
-            
-            yield return new WaitForSeconds(waitHorde);
-
-            
-            if (counter == spawnPowerUp)
-            {
-                Asteorid.GetComponent<Renderer>().material.color = Color.red;
-                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
-                Instantiate(AsteoridPowerUp, spawnPosition, Quaternion.identity);
-
-            }
-            Wave++;
-            puntuacion.text = "WAVE: " + Wave;
-
-            counter++;
-        }
+        
         
 	  }
 }
