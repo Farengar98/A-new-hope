@@ -10,6 +10,7 @@ public class ENEMY_ATTACK : MonoBehaviour {
     public float fireRate;
     private float nextFire ;
     
+    
 
     // Use this for initialization
     void Start ()
@@ -23,7 +24,7 @@ public class ENEMY_ATTACK : MonoBehaviour {
     {
         
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-        
+          
     }
         
     }

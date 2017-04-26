@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 
 public class DestroyEnemy : MonoBehaviour
 {
     
     public GameObject explosion;
+
+    
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,7 +17,7 @@ public class DestroyEnemy : MonoBehaviour
         Destroy(gameObject);
         Destroy(Instantiate(explosion, transform.position, transform.rotation), 2);
         
-        
+
     }
 
 }

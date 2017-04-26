@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
     public GameObject Asteorid;
@@ -11,21 +12,21 @@ public class GameController : MonoBehaviour {
     int counter = 0;
     public int spawnPowerUp;
     private int Wave = 0;
+    public Text puntuacion;
 	
 	void Start ()
     {
-           StartCoroutine( SpawnAteroids());         
-        
- 
-	}
+           StartCoroutine( SpawnAteroids());
+           puntuacion.text = "WAVE: " + Wave;
+
+
+    }
 	
 	IEnumerator SpawnAteroids()
     {
         while (true)
         {
-            print("Wave: "+ Wave);
-
-
+            
             for (int i = 0; i < totalAsteoirds; i++)
             {
                 
@@ -34,7 +35,7 @@ public class GameController : MonoBehaviour {
                 Instantiate(Asteorid, spawnPosition, Quaternion.identity);
                 yield return new WaitForSeconds(spawnDelay);
             }
-            Wave++;
+            
             yield return new WaitForSeconds(waitHorde);
 
             
@@ -45,6 +46,8 @@ public class GameController : MonoBehaviour {
                 Instantiate(AsteoridPowerUp, spawnPosition, Quaternion.identity);
 
             }
+            Wave++;
+            puntuacion.text = "WAVE: " + Wave;
 
             counter++;
         }
