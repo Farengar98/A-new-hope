@@ -9,11 +9,11 @@ public class DestroyEnemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "LimitMap") return;
+        if (other.tag == "Bullet" || other.tag == "LimitMap") return;
         Destroy(other.gameObject);
         Destroy(gameObject);
-        Instantiate(explosion, transform.position, transform.rotation);
-
+        Destroy(Instantiate(explosion, transform.position, transform.rotation), 2);
+        
         
     }
 
