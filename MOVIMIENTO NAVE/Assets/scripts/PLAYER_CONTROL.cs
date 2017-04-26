@@ -22,7 +22,7 @@ public class PLAYER_CONTROL : MonoBehaviour
     public float limiteY;
     public float Dash;
     public GameObject flash;
-    
+
     //VELOCIDAD BOOST
     public float BoostUp = 40;
     public float BoostDown = -40;
@@ -71,7 +71,7 @@ public class PLAYER_CONTROL : MonoBehaviour
         {
             PLAYER.transform.position = new Vector3(limiteX, PLAYER.transform.position.y, PLAYER.transform.position.z);
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, GetComponent<Rigidbody2D>().velocity.y);
-            
+
         }
 
         else if (posicionX < -limiteX)
@@ -169,39 +169,18 @@ public class PLAYER_CONTROL : MonoBehaviour
             RightPressed = true;
         }
 
-        if (Input.GetKey(KeyCode.Space)) {
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                Instantiate(flash, transform.position, transform.rotation);
-                PLAYER.transform.position = new Vector3(PLAYER.transform.position.x, PLAYER.transform.position.y + (Dash/40 *GetComponent<Rigidbody2D>().velocity.y), PLAYER.transform.position.z);
-                Instantiate(flash, transform.position, transform.rotation);
-            }
-
-            //OESTE
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                //Instantiate(flash, transform.position, transform.rotation);
-                PLAYER.transform.position = new Vector3(PLAYER.transform.position.x + (Dash / 40 * GetComponent<Rigidbody2D>().velocity.x), PLAYER.transform.position.y, PLAYER.transform.position.z);
-                //Instantiate(flash, transform.position, transform.rotation);
-            }
-
-            //SUD
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                //Instantiate(flash, transform.position, transform.rotation);
-                PLAYER.transform.position = new Vector3(PLAYER.transform.position.x, PLAYER.transform.position.y + (Dash / 40 * GetComponent<Rigidbody2D>().velocity.y), PLAYER.transform.position.z);
-               // Instantiate(flash, transform.position, transform.rotation);
-            }
-
-            //ESTE
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                //Instantiate(flash, transform.position, transform.rotation);
-                PLAYER.transform.position = new Vector3(PLAYER.transform.position.x + (Dash / 40 * GetComponent<Rigidbody2D>().velocity.x), PLAYER.transform.position.y, PLAYER.transform.position.z);
-                //Instantiate(flash, transform.position, transform.rotation);
-            }
-
+        if (Input.GetKeyDown(KeyCode.Space)) {
+ 
+            Destroy(Instantiate(flash, transform.position, transform.rotation), 1);
+            PLAYER.transform.position = new Vector2(PLAYER.transform.position.x + ((Dash / 40) * GetComponent<Rigidbody2D>().velocity.x), PLAYER.transform.position.y + ((Dash / 40) * GetComponent<Rigidbody2D>().velocity.y));
+            Destroy(Instantiate(flash, transform.position, transform.rotation), 1);
+             
+            
         }
+ 
+
+
+        
 
             //FRENAR
             if (!buttonPressed)

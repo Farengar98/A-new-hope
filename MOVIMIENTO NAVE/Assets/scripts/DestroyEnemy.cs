@@ -14,7 +14,6 @@ public class DestroyEnemy : MonoBehaviour
         Destroy(gameObject);
         Instantiate(explosion, transform.position, transform.rotation);
 
-        Destroy(explosion.gameObject);
         
     }
 

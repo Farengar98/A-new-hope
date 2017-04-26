@@ -70,6 +70,7 @@
     <Compile Include="Assets\Explosion System\Scripts\GraphicExplosion.cs" />
     <Compile Include="Assets\Explosion System\Scripts\PhysicalExplosion.cs" />
     <Compile Include="Assets\Explosion System\Scripts\light_control.cs" />
+    <Compile Include="Assets\changeScene.cs" />
     <Compile Include="Assets\scripts\DISPARO_FISICAS.cs" />
     <Compile Include="Assets\scripts\DestroyByArea.cs" />
     <Compile Include="Assets\scripts\DestroyEnemy.cs" />
