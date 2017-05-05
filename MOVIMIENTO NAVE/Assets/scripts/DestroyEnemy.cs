@@ -7,6 +7,7 @@ public class DestroyEnemy : MonoBehaviour
 {
     
     public GameObject explosion;
+    public GameObject ScoreMng;
 
     
 
@@ -16,7 +17,8 @@ public class DestroyEnemy : MonoBehaviour
         Destroy(other.gameObject);
         Destroy(gameObject);
         Destroy(Instantiate(explosion, transform.position, transform.rotation), 2);
-        
+        ScoreMng.GetComponent<GameController>().Score += 1;
+
 
     }
 

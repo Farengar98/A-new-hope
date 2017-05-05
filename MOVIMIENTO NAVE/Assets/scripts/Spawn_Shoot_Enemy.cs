@@ -27,8 +27,9 @@ public class Spawn_Shoot_Enemy : MonoBehaviour {
             
             posicionX = (Enemy.transform.position.x);
             posicionY = (Enemy.transform.position.y);
-            Instantiate(shot);
-            shot.transform.position = new Vector2(posicionX - 8, posicionY);
+            GameObject newShot = Instantiate(shot);
+            newShot.transform.position = new Vector2(posicionX - 8, posicionY);
+            newShot.GetComponent<Shoot_Movement>().Enemy = this.gameObject;
             yield return new WaitForSeconds(fireRate);
         } 
     }

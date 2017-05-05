@@ -16,7 +16,7 @@ public class Shoot_Movement : MonoBehaviour {
 	void Update ()
     {
         //shot.transform.position = new Vector2 (Enemy.transform.position.x - 8 , Enemy.transform.position.y);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(-20, 0);
-
+        //GetComponent<Rigidbody2D>().velocity = new Vector2(-20, 0);
+        transform.position = new Vector2(Enemy.transform.position.x - 8, Enemy.transform.position.y);
     }
 }

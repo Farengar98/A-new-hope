@@ -6,7 +6,9 @@ public class DestroyByArea : MonoBehaviour {
     void OnTriggerEnter2D (Collider2D other)
     {
         if (other.tag == "PLAYER") return;
+        if (other.tag == "noDestruir") return;
         Destroy(other.gameObject);
+
     }
 
 }

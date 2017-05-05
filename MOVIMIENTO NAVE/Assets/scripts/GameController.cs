@@ -14,12 +14,18 @@ public class GameController : MonoBehaviour {
 
     //UI PUNTUACION
     private int Wave = 0;
-    public Text puntuacion;
-	
-	void Start ()
+    public int Score = 0;
+    public Text waveText;
+    public Text scoreText;
+
+
+    void Start ()
     {
+        Score = 0;
            StartCoroutine( SpawnAteroids());
-           puntuacion.text = "WAVE: " + Wave;
+           waveText.text = "WAVE: " + Wave;
+           scoreText.text = "SCORE: " + Score;
+
 
 
     }
@@ -37,9 +43,10 @@ public class GameController : MonoBehaviour {
                     Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
                     Instantiate(Asteorid, spawnPosition, Quaternion.identity);
                     yield return new WaitForSeconds(spawnDelay);
-                }
-
-                yield return new WaitForSeconds(waitHorde);
+                    scoreText.text = "SCORE: " + Score;
+            }
+            scoreText.text = "SCORE: " + Score;
+            yield return new WaitForSeconds(waitHorde);
 
 
                 /*if (counter == spawnPowerUp)
@@ -50,9 +57,10 @@ public class GameController : MonoBehaviour {
 
                 }*/
                 Wave++;
-                puntuacion.text = "WAVE: " + Wave;
+                waveText.text = "WAVE: " + Wave;
+                scoreText.text = "SCORE: " + Score;
 
-            }
+        }
         
         
 	  }
