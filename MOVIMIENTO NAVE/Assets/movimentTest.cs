@@ -18,10 +18,11 @@ public class movimentTest : MonoBehaviour {
 	void Update () {
         currentPosX -= 0.1f;
       this.transform.position = new Vector2(currentPosX, currentPosY);
-
+		/*
         if(this.transform.position.x < -200)
         {
             Destroy(this.gameObject);
         }
+        */
 	}
 }

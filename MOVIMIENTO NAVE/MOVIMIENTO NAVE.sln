@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOVIMIENTO NAVE.CSharp", "MOVIMIENTO NAVE.CSharp.csproj", "{D7489B8A-B19E-47DD-B2CC-FE7FEA261858}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{A9597C93-2821-93B4-AFF9-3C6B6C2E26C4}") = "MOVIMIENTO NAVE", "Assembly-CSharp.csproj", "{A131C9A6-E21D-3C0E-A884-AA3F0DDFCC61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D7489B8A-B19E-47DD-B2CC-FE7FEA261858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7489B8A-B19E-47DD-B2CC-FE7FEA261858}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7489B8A-B19E-47DD-B2CC-FE7FEA261858}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7489B8A-B19E-47DD-B2CC-FE7FEA261858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A131C9A6-E21D-3C0E-A884-AA3F0DDFCC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A131C9A6-E21D-3C0E-A884-AA3F0DDFCC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A131C9A6-E21D-3C0E-A884-AA3F0DDFCC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A131C9A6-E21D-3C0E-A884-AA3F0DDFCC61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
