@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class EditorPathScript : MonoBehaviour {
-
+    /*
 	public Color rayColor = Color.white;
 	public List<Transform> path_objs = new List<Transform> ();
 	Transform[] theArray;
@@ -33,6 +33,6 @@ public class EditorPathScript : MonoBehaviour {
 			}
 		}
 	}
-
+    */
 
 }
