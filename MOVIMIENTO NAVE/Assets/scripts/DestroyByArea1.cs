@@ -21,11 +21,12 @@ public class DestroyByArea1 : MonoBehaviour {
         Physics2D.IgnoreCollision(destructor.GetComponent<EdgeCollider2D>(), GetComponent<EdgeCollider2D>());
         if (other.tag == "noDestruir") return;
         if (other.tag == "LimitMap") return;
+        if (other.tag == "Energy") return;
 
         coorX = (other.gameObject.transform.position.x);
         coorY = (other.gameObject.transform.position.y);
 
-        if (other.tag == "Bullet")
+        if (other.tag == "Bullet" || other.tag == "Disparo Player")
         {
             Destroy(other.gameObject);
             return;

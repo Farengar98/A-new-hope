@@ -10,9 +10,11 @@ public class ShootDestroy : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "LimitMap") return;
-        else if (other.tag == "ENEMY") return;
-        else if (other.tag == "Fondo") return;
-        else if (other.tag == "Bullet") return;
+        if (other.tag == "ENEMY") return;
+        if (other.tag == "Fondo") return;
+        if (other.tag == "Bullet") return;
+        if (other.tag == "PLAYER") return;
+        if (other.tag == "Energy") return;
         Destroy(other.gameObject);
         Destroy(gameObject);
         Destroy(Instantiate(explosion, other.gameObject.transform.position, transform.rotation), 2);

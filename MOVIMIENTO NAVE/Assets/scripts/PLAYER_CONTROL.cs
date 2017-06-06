@@ -7,6 +7,8 @@ public class PLAYER_CONTROL : MonoBehaviour
 {
     //CONTROL TECLAS APRETADAS
 
+    int health = 1;
+
     bool buttonPressed;
 
     bool UpPressed = false;
@@ -24,6 +26,8 @@ public class PLAYER_CONTROL : MonoBehaviour
     public float limiteY;
     public float Dash;
     public GameObject flash;
+
+    public GameObject explosion;
 
     //VELOCIDAD BOOST
     public float BoostUp = 40;
@@ -56,6 +60,33 @@ public class PLAYER_CONTROL : MonoBehaviour
     private Image healthBarImg;
 
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //Destroy(other.gameObject);
+        if (other.tag == "Energy")
+        {
+            resetBez();
+            Destroy(other.gameObject);
+            Destroy(Instantiate(flash, other.transform.position, other.transform.rotation), 1);
+
+        }
+
+        else if (other.tag == "Bullet")
+        {
+            if (health > 0)
+            {
+                health--;
+                Destroy(other.gameObject);
+
+            }
+            else
+            {
+                Destroy(gameObject);
+                Destroy(other.gameObject);
+                Destroy(Instantiate(explosion, other.transform.position, other.transform.rotation), 1);
+            }
+        }
+    }
 
 
     // Use this for initialization
@@ -71,6 +102,11 @@ public class PLAYER_CONTROL : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void resetBez()
+    {
+        healthBarImg.fillAmount = 1;
     }
     // Update is called once per frame
     void Update()

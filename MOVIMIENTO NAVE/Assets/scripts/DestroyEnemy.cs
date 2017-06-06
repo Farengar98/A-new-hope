@@ -17,6 +17,7 @@ public class DestroyEnemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.tag == "Energy") return;
         if (other.tag == "LimitMap" || other.tag == "Fondo")return;
         Destroy(other.gameObject);
         
@@ -25,7 +26,7 @@ public class DestroyEnemy : MonoBehaviour
         //ScoreMng.GetComponent<GameController>().Score += 1;
         gameController.Score += 20;
 
-        if (other.tag == "Bullet") return;
+        if (other.tag == "Bullet" || other.tag == "Disparo Player") return;
         Destroy(Instantiate(explosion, other.gameObject.transform.position, transform.rotation), 2);
 
 
