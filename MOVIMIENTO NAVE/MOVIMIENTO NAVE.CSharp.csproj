@@ -66,12 +66,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DISPARO_ENEMIGO.cs" />
-    <Compile Include="Assets\ENEMIGO_DISPARANDO.cs" />
-    <Compile Include="Assets\ENEMY_ATTACK.cs" />
-    <Compile Include="Assets\ENEMY_MOVEMENT.cs" />
-    <Compile Include="Assets\Enemy1_Follow.cs" />
-    <Compile Include="Assets\Enemy_Disparo_Fisicas.cs" />
+    <Compile Include="Assets\DESTROY_ENEMY_3.cs" />
+    <Compile Include="Assets\DISPARE_ENEMIGO_3_LEFT.cs" />
+    <Compile Include="Assets\DISPARO_3_R_UP.cs" />
+    <Compile Include="Assets\DISPARO_ENEMIGO_3_DOWN.cs" />
+    <Compile Include="Assets\DISPARO_ENEMIGO_3_L_DOWN.cs" />
+    <Compile Include="Assets\DISPARO_ENEMIGO_3_R_DOWN.cs" />
+    <Compile Include="Assets\DISPARO_ENEMIGO_3_UP.cs" />
+    <Compile Include="Assets\DISPARO_ENEMIGO_L_UP.cs" />
+    <Compile Include="Assets\ENEMY3_FOLLOW.cs" />
+    <Compile Include="Assets\Enemy2_Follow.cs" />
     <Compile Include="Assets\Explosion System\Demo\Script (for Demo)\ExplosionControl.cs" />
     <Compile Include="Assets\Explosion System\Scripts\GraphicExplosion.cs" />
     <Compile Include="Assets\Explosion System\Scripts\PhysicalExplosion.cs" />
@@ -82,23 +86,29 @@
     <Compile Include="Assets\WaypointPro\Script\PathData.cs" />
     <Compile Include="Assets\WaypointPro\Script\PathFollower.cs" />
     <Compile Include="Assets\WaypointPro\Script\WaypointManager.cs" />
-    <Compile Include="Assets\basic_movement.cs" />
-    <Compile Include="Assets\followFirstPath.cs" />
-    <Compile Include="Assets\movimentTest.cs" />
+    <Compile Include="Assets\scripts\DISPARO_ENEMIGO.cs" />
     <Compile Include="Assets\scripts\DISPARO_FISICAS.cs" />
     <Compile Include="Assets\scripts\DestroyByArea.cs" />
     <Compile Include="Assets\scripts\DestroyByArea1.cs" />
     <Compile Include="Assets\scripts\DestroyEnemy.cs" />
+    <Compile Include="Assets\scripts\ENEMIGO_DISPARANDO.cs" />
+    <Compile Include="Assets\scripts\ENEMY_ATTACK.cs" />
+    <Compile Include="Assets\scripts\ENEMY_MOVEMENT.cs" />
     <Compile Include="Assets\scripts\EditorPathScript.cs" />
+    <Compile Include="Assets\scripts\Enemy1_Follow.cs" />
+    <Compile Include="Assets\scripts\Enemy_Disparo_Fisicas.cs" />
     <Compile Include="Assets\scripts\GameController.cs" />
     <Compile Include="Assets\scripts\MainMenu.cs" />
     <Compile Include="Assets\scripts\PLAYER_CONTROL.cs" />
     <Compile Include="Assets\scripts\ShootDestroy.cs" />
     <Compile Include="Assets\scripts\Shoot_Movement.cs" />
     <Compile Include="Assets\scripts\Spawn_Shoot_Enemy.cs" />
+    <Compile Include="Assets\scripts\basic_movement.cs" />
     <Compile Include="Assets\scripts\changeScene.cs" />
+    <Compile Include="Assets\scripts\followFirstPath.cs" />
     <Compile Include="Assets\scripts\idleMenu.cs" />
     <Compile Include="Assets\scripts\idleMenuTitle.cs" />
+    <Compile Include="Assets\scripts\movimentTest.cs" />
     <Compile Include="Assets\scripts\rotarCoso.cs" />
   </ItemGroup>
   <ItemGroup>
