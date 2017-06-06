@@ -7,6 +7,7 @@ public class DestroyByArea : MonoBehaviour {
     {
         if (other.tag == "PLAYER") return;
         if (other.tag == "noDestruir") return;
+        if (other.tag == "Fondo") return;
         Destroy(other.gameObject);
 
     }
