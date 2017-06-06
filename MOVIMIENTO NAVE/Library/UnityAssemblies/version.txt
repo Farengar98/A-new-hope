@@ -1,9 +1,5 @@
-<<<<<<< Updated upstream
-5.4.2f2:3.1.0.0
-=======
 5.4.2f2:2.8.2.0
->>>>>>> Stashed changes
-StandaloneWindows
+StandaloneWindows64
 C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll
 C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
 C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll

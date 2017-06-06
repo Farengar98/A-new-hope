@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
     public GameObject Asteorid;
     public GameObject AsteoridPowerUp;
+    public GameObject player;
     public Vector3 spawnValues;
     public int totalAsteoirds;
     public float spawnDelay;
@@ -29,8 +31,22 @@ public class GameController : MonoBehaviour {
 
 
     }
-	
-	IEnumerator SpawnAteroids()
+
+    void Update()
+    {
+            if (player == null)
+            {
+                SceneManager.LoadScene(0);
+            }
+
+        if (Wave == 4)
+        {
+            SceneManager.LoadScene(3);
+        }
+
+    }
+
+    IEnumerator SpawnAteroids()
     {
         
             while (true)
