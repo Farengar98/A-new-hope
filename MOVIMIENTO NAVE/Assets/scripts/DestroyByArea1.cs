@@ -24,6 +24,12 @@ public class DestroyByArea1 : MonoBehaviour {
 
         coorX = (other.gameObject.transform.position.x);
         coorY = (other.gameObject.transform.position.y);
+
+        if (other.tag == "Bullet")
+        {
+            Destroy(other.gameObject);
+            return;
+        }
         
         Destroy(other.gameObject);
 
