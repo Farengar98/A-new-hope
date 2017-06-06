@@ -18,7 +18,7 @@
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.4.2f2</UnityVersion>
     <RootNamespace></RootNamespace>
-    <LangVersion>4</LangVersion>
+    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -66,8 +66,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Compile Include="Assets\Basic_Movment.cs" />
     <Compile Include="Assets\CollisionIgnore.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\DISPARO_ENEMIGO.cs" />
     <Compile Include="Assets\ENEMIGO_DISPARANDO.cs" />
     <Compile Include="Assets\ENEMY_ATTACK.cs" />
@@ -84,8 +87,15 @@
     <Compile Include="Assets\WaypointPro\Script\PathData.cs" />
     <Compile Include="Assets\WaypointPro\Script\PathFollower.cs" />
     <Compile Include="Assets\WaypointPro\Script\WaypointManager.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\followFirstPath.cs" />
     <Compile Include="Assets\movimentTest.cs" />
+=======
+    <Compile Include="Assets\basic_movement.cs" />
+    <Compile Include="Assets\followFirstPath.cs" />
+    <Compile Include="Assets\movimentTest.cs" />
+    <Compile Include="Assets\scripts\BarScript.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Assets\scripts\DISPARO_FISICAS.cs" />
     <Compile Include="Assets\scripts\DestroyByArea.cs" />
     <Compile Include="Assets\scripts\DestroyByArea1.cs" />

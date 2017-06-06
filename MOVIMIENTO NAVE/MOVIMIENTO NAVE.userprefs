@@ -1,10 +1,18 @@
 ﻿<Properties StartupItem="MOVIMIENTO NAVE.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\DestroyByArea1.cs">
     <Files>
       <File FileName="Assets\followFirstPath.cs" Line="12" Column="65" />
       <File FileName="Assets\movimentTest.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\DestroyByArea1.cs" Line="1" Column="1" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\DestroyByArea.cs">
+    <Files>
+      <File FileName="Assets\followFirstPath.cs" Line="12" Column="65" />
+      <File FileName="Assets\movimentTest.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\DestroyByArea.cs" Line="1" Column="1" />
+>>>>>>> Stashed changes
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

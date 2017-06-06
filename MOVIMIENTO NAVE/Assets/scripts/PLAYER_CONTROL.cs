@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PLAYER_CONTROL : MonoBehaviour
 {
@@ -48,7 +49,10 @@ public class PLAYER_CONTROL : MonoBehaviour
     public float fireRate;
     private float nextFire;
 
-
+    //BENZINA
+    [Header("Benzina")]
+    [SerializeField]
+    private Image healthBarImg;
 
 
 
@@ -56,12 +60,23 @@ public class PLAYER_CONTROL : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        InvokeRepeating("restarBez", 3.0f, 0.3f);
     }
 
+    void restarBez()
+    {
+        healthBarImg.fillAmount -= 0.015f;
+        if(healthBarImg.fillAmount <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
+       
+       
+
         buttonPressed = false;
 
         posicionX = (PLAYER.transform.position.x);
