@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DISPARO_ENEMIGO_3_DOWN : MonoBehaviour {
-
+public class DISPARO_ENEMIGO_DOWN : MonoBehaviour {
 
     public float speed;
 
@@ -18,5 +17,4 @@ public class DISPARO_ENEMIGO_3_DOWN : MonoBehaviour {
     {
         rig.velocity = new Vector2(0, -speed);
     }
-
 }
