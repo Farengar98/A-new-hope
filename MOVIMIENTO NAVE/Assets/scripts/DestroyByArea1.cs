@@ -24,6 +24,7 @@ public class DestroyByArea1 : MonoBehaviour {
         if (other.tag == "Energy") return;
         if (other.tag == "Power1") return;
         if (other.tag == "Power2") return;
+        if (other.tag == "ENEMY") return;
 
 
         coorX = (other.gameObject.transform.position.x);

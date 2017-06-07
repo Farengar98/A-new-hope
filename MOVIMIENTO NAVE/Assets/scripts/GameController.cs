@@ -13,6 +13,9 @@ public class GameController : MonoBehaviour {
     public GameObject Enemigo2;
     public GameObject Enemigo3;
     public GameObject Enemigo4;
+    public GameObject Enemigo5;
+    public GameObject Energy;
+
     [Header("Spawn control")]
     public int totalAsteoirds;
     public float spawnDelay;
@@ -33,8 +36,8 @@ public class GameController : MonoBehaviour {
     {
         Score = 0;
            StartCoroutine( SpawnAteroids());
-           waveText.text = "WAVE: " + Wave;
-           scoreText.text = "SCORE: " + Score;
+           //waveText.text = "WAVE: " + Wave;
+           //scoreText.text = "SCORE: " + Score;
 
 
 
@@ -47,47 +50,78 @@ public class GameController : MonoBehaviour {
                 SceneManager.LoadScene(0);
             }
 
-        if (Wave == 4)
+        /*if (Wave == 4)
         {
             SceneManager.LoadScene(3);
-        }
+        }*/
 
     }
 
     IEnumerator SpawnAteroids()
     {
-
+        int i = 0;
         while (true)
         {
 
-            for (int i = 0; i < 4; i++)
+
+
+            if (i == 0)
             {
-
-                if (i == 0)
-                {
-                    Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
-                    Instantiate(Enemigo1, spawnPosition, Quaternion.identity);
-                }
-                else if (i == 1)
-                {
-                    Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
-                    Instantiate(Enemigo2, spawnPosition, Quaternion.identity);
-                }
-                else if (i == 2)
-                {
-                    Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
-                    Instantiate(Enemigo3, spawnPosition, Quaternion.identity);
-                }
-                else if (i == 4)
-                {
-                    Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
-                    Instantiate(Enemigo3, spawnPosition, Quaternion.identity);
-                }
-                yield return new WaitForSeconds(spawnDelay);
-
+                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Instantiate(Enemigo1, spawnPosition, Quaternion.identity);
+                Instantiate(Energy, spawnPosition, Quaternion.identity);
             }
-            scoreText.text = "SCORE: " + Score;
-            yield return new WaitForSeconds(waitHorde);
+            else if (i == 1)
+            {
+                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Instantiate(Enemigo2, spawnPosition, Quaternion.identity);
+                spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Instantiate(Energy, spawnPosition, Quaternion.identity);
+            }
+            else if (i == 2)
+            {
+                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Instantiate(Enemigo3, spawnPosition, Quaternion.identity);
+                Instantiate(Energy, spawnPosition, Quaternion.identity);
+            }
+            else if (i == 3)
+            {
+                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Instantiate(Enemigo4, spawnPosition, Quaternion.identity);
+                Instantiate(Energy, spawnPosition, Quaternion.identity);
+            }
+            else if (i == 4)
+            {
+                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Instantiate(Enemigo2, spawnPosition, Quaternion.identity);
+                spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Instantiate(Energy, spawnPosition, Quaternion.identity);
+            }
+            else if (i == 5)
+            {
+                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Instantiate(Enemigo3, spawnPosition, Quaternion.identity);
+                Instantiate(Energy, spawnPosition, Quaternion.identity);
+            }
+            else if (i == 7)
+            {
+                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Instantiate(Enemigo1, spawnPosition, Quaternion.identity);
+                spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Instantiate(Energy, spawnPosition, Quaternion.identity);
+            }
+            else if (i == 8)
+            {
+                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Instantiate(Enemigo5, spawnPosition, Quaternion.identity);
+                Instantiate(Energy, spawnPosition, Quaternion.identity);
+            }
+            i++;
+            yield return new WaitForSeconds(spawnDelay);
+        
+        }
+            //scoreText.text = "SCORE: " + Score;
+            //yield return new WaitForSeconds(waitHorde);
         
 
                 /*if (counter == spawnPowerUp)
@@ -97,12 +131,12 @@ public class GameController : MonoBehaviour {
                     Instantiate(AsteoridPowerUp, spawnPosition, Quaternion.identity);
 
                 }*/
-                Wave++;
-                waveText.text = "WAVE: " + Wave;
-                scoreText.text = "SCORE: " + Score;
+                //Wave++;
+                //waveText.text = "WAVE: " + Wave;
+                //scoreText.text = "SCORE: " + Score;
 
         }
         
         
 	  }
-}
+

@@ -51,7 +51,11 @@ public class PLAYER_CONTROL : MonoBehaviour
     //CONTROL DEL DISPARO
     [Header("Shooting")]
     public GameObject shot;
+    public GameObject shotUp;
+    public GameObject shotDown;
     public Transform shotSpawn;
+    public Transform shotSpawnUp;
+    public Transform shotSpawnDown;
     public float fireRate;
     private float nextFire;
 
@@ -378,8 +382,23 @@ public class PLAYER_CONTROL : MonoBehaviour
         //DISPARO
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
-            nextFire = Time.time + fireRate;
-            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+            if (health == 1)
+            {
+                nextFire = Time.time + fireRate;
+                Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+            }
+            else if (health == 2)
+            {
+                nextFire = Time.time + fireRate / 2;
+                Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+            }
+            else if (health >= 3)
+            {
+                nextFire = Time.time + fireRate / 2;
+                Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+                Instantiate(shotUp, shotSpawnUp.position, shotSpawnUp.rotation);
+                Instantiate(shotDown, shotSpawnDown.position, shotSpawnDown.rotation);
+            }
         }
 
     }
