@@ -10,6 +10,7 @@ public class DestroyByArea : MonoBehaviour {
         if (other.tag == "Fondo") return;
         if (other.tag == "Energy") return;
         if (other.tag == "Power1") return;
+        if (other.tag == "Power2") return;
 
         Destroy(other.gameObject);
 

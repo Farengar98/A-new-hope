@@ -32,6 +32,7 @@ public class DESTROY_ENEMY_3 : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.tag == "Power2") return;
         if (other.tag == "Bullet" || other.tag == "LimitMap") return;
         Destroy(other.gameObject);
         Destroy(gameObject);

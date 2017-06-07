@@ -5,6 +5,7 @@ public class Basic_Movment1 : MonoBehaviour
 {
 
     public float speed;
+    public GameObject BOSS;
 
     private Rigidbody2D rig;
 
@@ -21,11 +22,15 @@ public class Basic_Movment1 : MonoBehaviour
 
     private void Update()
     {
-        if (gameObject.transform.position.x < -85)
+        if (gameObject.transform.position.x < -95)
         {
             rig.velocity = new Vector2(0, 0);
+            Instantiate(BOSS, BOSS.transform.position, BOSS.transform.rotation);
+            Destroy(gameObject);
+            
         }
           
+
           
     }
 

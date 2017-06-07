@@ -23,6 +23,7 @@ public class DestroyByArea1 : MonoBehaviour {
         if (other.tag == "LimitMap") return;
         if (other.tag == "Energy") return;
         if (other.tag == "Power1") return;
+        if (other.tag == "Power2") return;
 
 
         coorX = (other.gameObject.transform.position.x);

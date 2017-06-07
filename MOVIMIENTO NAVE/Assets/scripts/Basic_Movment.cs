@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Basic_Movment : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class Basic_Movment : MonoBehaviour
         if (gameObject.transform.position.x < -62)
         {
             rig.velocity = new Vector2(0, 0);
+            SceneManager.LoadScene(4);
         }
           
           
