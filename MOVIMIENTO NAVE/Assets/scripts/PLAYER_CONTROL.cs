@@ -8,6 +8,7 @@ public class PLAYER_CONTROL : MonoBehaviour
     //CONTROL TECLAS APRETADAS
 
     int health = 1;
+    int powerUP = 0;
 
     bool buttonPressed;
 
@@ -86,6 +87,23 @@ public class PLAYER_CONTROL : MonoBehaviour
                 Destroy(Instantiate(explosion, other.transform.position, other.transform.rotation), 1);
             }
         }
+
+        else if (other.tag == "Power1")
+        {
+            health++;
+            Destroy(other.gameObject);
+            Destroy(Instantiate(flash, transform.position, transform.rotation), 1);
+           
+        }
+
+        else if (other.tag == "Power2")
+        {
+            health++;
+            Destroy(other.gameObject);
+            Destroy(Instantiate(flash, transform.position, transform.rotation), 1);
+            
+        }
+
     }
 
 

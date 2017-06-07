@@ -17,6 +17,7 @@ public class DestroyEnemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.tag == "Power1") return;
         if (other.tag == "Energy") return;
         if (other.tag == "LimitMap" || other.tag == "Fondo")return;
         Destroy(other.gameObject);

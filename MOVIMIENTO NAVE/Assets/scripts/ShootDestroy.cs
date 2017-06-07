@@ -15,6 +15,7 @@ public class ShootDestroy : MonoBehaviour
         if (other.tag == "Bullet") return;
         if (other.tag == "PLAYER") return;
         if (other.tag == "Energy") return;
+        if (other.tag == "Power1") return;
         Destroy(other.gameObject);
         Destroy(gameObject);
         Destroy(Instantiate(explosion, other.gameObject.transform.position, transform.rotation), 2);
