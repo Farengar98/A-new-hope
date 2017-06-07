@@ -50,17 +50,17 @@ public class GameController : MonoBehaviour {
                 SceneManager.LoadScene(0);
             }
 
-        /*if (Wave == 4)
+        if (Wave == 4)
         {
             SceneManager.LoadScene(3);
-        }*/
+        }
 
     }
 
     IEnumerator SpawnAteroids()
     {
         int i = 0;
-        while (true)
+        while (i < 8)
         {
 
 
@@ -137,6 +137,5 @@ public class GameController : MonoBehaviour {
 
         }
         
-        
-	  }
+   }
 

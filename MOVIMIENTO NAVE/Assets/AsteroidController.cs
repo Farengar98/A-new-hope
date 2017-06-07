@@ -8,6 +8,7 @@ public class AsteroidController : MonoBehaviour
 {
     public GameObject Asteorid;
     public GameObject AsteoridPowerUp;
+    public GameObject player;
     public Vector3 spawnValues;
     public int totalAsteoirds;
     public float spawnDelay;
@@ -35,7 +36,10 @@ public class AsteroidController : MonoBehaviour
 
     void Update()
     {
-
+        if (player == null)
+        {
+            SceneManager.LoadScene(0);
+        }
         if (Wave == 4)
         {
             SceneManager.LoadScene(3);

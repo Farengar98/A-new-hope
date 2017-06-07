@@ -382,7 +382,7 @@ public class PLAYER_CONTROL : MonoBehaviour
         //DISPARO
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
-            if (health == 1)
+            if (health <= 1)
             {
                 nextFire = Time.time + fireRate;
                 Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
