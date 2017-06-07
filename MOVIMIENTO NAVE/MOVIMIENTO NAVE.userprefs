@@ -1,18 +1,11 @@
-﻿<Properties StartupItem="MOVIMIENTO NAVE.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< Updated upstream
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\DestroyByArea1.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\movBoss.cs">
     <Files>
-      <File FileName="Assets\followFirstPath.cs" Line="12" Column="65" />
-      <File FileName="Assets\movimentTest.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\DestroyByArea1.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\DestroyByArea.cs">
-    <Files>
-      <File FileName="Assets\followFirstPath.cs" Line="12" Column="65" />
-      <File FileName="Assets\movimentTest.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\DestroyByArea.cs" Line="1" Column="1" />
->>>>>>> Stashed changes
+      <File FileName="Assets\scripts\PLAYER_CONTROL.cs" Line="95" Column="9" />
+      <File FileName="Assets\scripts\movBoss.cs" Line="51" Column="3" />
+      <File FileName="Assets\BossAttack1.cs" Line="9" Column="34" />
+      <File FileName="Assets\scripts\Basic_Movment1.cs" Line="15" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

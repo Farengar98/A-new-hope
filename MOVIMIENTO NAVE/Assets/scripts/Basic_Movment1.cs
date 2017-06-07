@@ -21,7 +21,7 @@ public class Basic_Movment1 : MonoBehaviour
 
     private void Update()
     {
-        if (gameObject.transform.position.x < -84)
+        if (gameObject.transform.position.x < -85)
         {
             rig.velocity = new Vector2(0, 0);
         }
